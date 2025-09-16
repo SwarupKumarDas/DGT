@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGT - UI Mockups</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7f9;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .screens-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .screen {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .screen:hover {
+            transform: translateY(-5px);
+        }
+        
+        .screen-header {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .screen-content {
+            padding: 20px;
+            min-height: 250px;
+            background: #f8f9fa;
+        }
+        
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        input, select {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #3498db;
+            margin: 10px 0;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .template-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .template-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .template-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .template-name {
+            font-weight: 600;
+        }
+        
+        .template-meta {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+        
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .status-draft {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .status-pending {
+            background: #3498db;
+            color: white;
+        }
+        
+        .status-approved {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .template-editor {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .editor-header {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .editor-toolbar {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            background: #ecf0f1;
+            border-radius: 6px;
+        }
+        
+        .editor-content {
+            min-height: 180px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            background: white;
+        }
+        
+        .variable {
+            display: inline-block;
+            background: #e8f4fc;
+            color: #3498db;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin: 0 2px;
+            font-weight: 600;
+        }
+        
+        .preview-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background: white;
+            min-height: 200px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .screens-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Document Generation Tool</h1>
+            <p class="subtitle">UI Mockups & Screen Designs</p>
+        </header>
+        
+        <h2>Application Screens</h2>
+        <p>Below are visual mockups of the main screens in the Document Generation Tool</p>
+        
+        <div class="screens-container">
+            <!-- Login Screen -->
+            <div class="screen">
+                <div class="screen-header">
+                    <h3>Login Screen</h3>
+                    <i class="fas fa-sign-in-alt"></i>
+                </div>
+                <div class="screen-content">
+                    <div class="login-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="user@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" value="••••••••">
+                        </div>
+                        <button class="btn">Sign In</button>
+                        <div style="text-align: center; margin-top: 15px;">
+                            <a href="#" style="color: #3498db; text-decoration: none;">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Admin Dashboard -->
+            <div class="screen">
+                <div class="screen-header">
+                    <h3>Admin Dashboard</h3>
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <div class="screen-content">
+                    <h4 style="margin-bottom: 15px;">Welcome, Admin</h4>
+                    <div class="dashboard-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Templates</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">5</div>
+                            <div class="stat-label">Pending Review</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">24</div>
+                            <div class="stat-label">Documents Generated</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Departments</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <button class="btn" style="width: 100%;">Review Queue (5)</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Template Management -->
+            <div class="screen">
+                <div class="screen-header">
+                    <h3>Template Management</h3>
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="screen-content">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                        <h4>My Templates</h4>
+                        <button class="btn">+ New Template</button>
+                    </div>
+                    <div class="template-list">
+                        <div class="template-item">
+                            <div class="template-info">
+                                <div class="template-name">Employment Offer Letter</div>
+                                <div class="template-meta">HR • Version 2.1</div>
+                            </div>
+                            <span class="status-badge status-approved">Approved</span>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-info">
+                                <div class="template-name">Sales Commission Policy</div>
+                                <div class="template-meta">Sales • Version 1.3</div>
+                            </div>
+                            <span class="status-badge status-pending">In Review</span>
+                        </div>
+                        <div class="template-item">
+                            <div class="template-info">
+                                <div class="template-name">Employee Appraisal</div>
+                                <div class="template-meta">HR • Version 3.0</div>
+                            </div>
+                            <span class="status-badge status-draft">Draft</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Template Editor -->
+            <div class="screen">
+                <div class="screen-header">
+                    <h3>Template Editor</h3>
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="screen-content">
+                    <div class="template-editor">
+                        <div class="editor-header">
+                            <input type="text" value="Employment Offer Letter" style="flex: 1;">
+                            <select>
+                                <option>HR</option>
+                                <option>Sales</option>
+                                <option>IT</option>
+                            </select>
+                        </div>
+                        <div class="editor-toolbar">
+                            <button><i class="fas fa-bold"></i></button>
+                            <button><i class="fas fa-italic"></i></button>
+                            <button><i class="fas fa-list-ul"></i></button>
+                            <button><i class="fas fa-list-ol"></i></button>
+                            <div style="flex: 1;"></div>
+                            <button><i class="fas fa-plus"></i> Variable</button>
+                        </div>
+                        <div class="editor-content">
+                            <p>Dear <span class="variable">candidate_name</span>,</p>
+                            <p>We are pleased to offer you the position of <span class="variable">position_title</span> at our company.</p>
+                            <p>Your start date will be <span class="variable">start_date</span> and your annual salary will be $<span class="variable">salary</span>.</p>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn">Save Draft</button>
+                            <button class="btn" style="background: #27ae60;">Submit for Review</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Document Filling -->
+            <div class="screen">
+                <div class="screen-header">
+                    <h3>Document Filling</h3>
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <div class="screen-content">
+                    <h4 style="margin-bottom: 15px;">Fill Template: Employment Offer Letter</h4>
+                    <div class="form-group">
+                        <label for="candidate_name">Candidate Name</label>
+                        <input type="text" id="candidate_name" value="John Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="position_title">Position Title</label>
+                        <input type="text" id="position_title" value="Senior Developer">
+                    </div>
+                    <div class="form-group">
+                        <label for="start_date">Start Date</label>
+                        <input type="date" id="start_date" value="2023-10-15">
+                    </div>
+                    <div class="form-group">
+                        <label for="salary">Annual Salary ($)</label>
+                        <input type="number" id="salary" value="95000">
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <button class="btn">Save Draft</button>
+                        <button class="btn" style="background: #27ae60;">Generate Document</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Document Preview -->
+            <div class="screen">
+                <div class="screen-header">
+                    <h3>Document Preview</h3>
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <div class="screen-content">
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <h4>Employment Offer Letter</h4>
+                        <p>Preview of generated document</p>
+                    </div>
+                    <div class="preview-container">
+                        <p>Dear <strong>John Smith</strong>,</p>
+                        <p>We are pleased to offer you the position of <strong>Senior Developer</strong> at our company.</p>
+                        <p>Your start date will be <strong>October 15, 2023</strong> and your annual salary will be $<strong>95,000</strong>.</p>
+                        <p>Please sign and return this letter by <strong>October 10, 2023</strong> to indicate your acceptance of this offer.</p>
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <button class="btn" style="background: #e74c3c;"><i class="fas fa-file-pdf"></i> Export PDF</button>
+                        <button class="btn" style="background: #3498db;"><i class="fas fa-file-word"></i> Export DOCX</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Document Generation Tool - UI Mockups</p>
+            <p>© 2023 DGT Application. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

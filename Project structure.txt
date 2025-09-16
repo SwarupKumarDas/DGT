@@ -1,0 +1,29 @@
+document-generation-tool/
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   ├── config/
+│   │   └── app.js
+│   ├── package.json
+│   ├── Dockerfile
+│   └── .env.example
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   ├── hooks/
+│   │   └── styles/
+│   ├── package.json
+│   └── Dockerfile
+├── docker-compose.yml
+├── nginx/
+│   └── nginx.conf
+└── README.md
