@@ -20,6 +20,7 @@ Import the SQL file if you have one (not required for the demo)
 Access the application:
 Open your web browser
 Navigate to http://localhost/dgt-project/
+
 <img width="1229" height="526" alt="image" src="https://github.com/user-attachments/assets/0fd9f3e8-f8f2-44bc-aa56-4e7b94d9f7e8" />
 
 Login with demo credentials:
