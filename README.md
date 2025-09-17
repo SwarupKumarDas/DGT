@@ -14,9 +14,13 @@ Set up the database (optional for this demo):
 Create a MySQL database named dgt_project
 Import the SQL file if you have one (not required for the demo)
 
+<img width="1214" height="597" alt="image" src="https://github.com/user-attachments/assets/7b89175a-ce65-422e-8845-d1d671420e15" />
+
+
 Access the application:
 Open your web browser
 Navigate to http://localhost/dgt-project/
+<img width="1229" height="526" alt="image" src="https://github.com/user-attachments/assets/0fd9f3e8-f8f2-44bc-aa56-4e7b94d9f7e8" />
 
 Login with demo credentials:
 Admin: username admin, password password123, role Administrator
