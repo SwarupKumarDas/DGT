@@ -37,4 +37,4 @@ Responsive Design: Works on desktop and mobile devices
 Modal Windows: For department management and other operations
 Tabbed Interface: For template editing, preview, and variables
 
-This PHP application provides a complete foundation for the DGT Project as described in your BRD document. You can extend it further by adding database integration, file uploads, and more advanced template editing features.
+
